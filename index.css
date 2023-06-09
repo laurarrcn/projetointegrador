@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+ 
 }
 
 header{
@@ -27,3 +28,25 @@ aside {
 main {
     
 }
+
+div#space {
+    width: 50%;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    border-radius: 20%;
+
+}
+
+footer{
+    position: fixed;
+    height: 10%;
+    bottom: 0vh;
+    width: 100%;
+    display: flex;
+    background-color:  rgb(39, 39, 74) ;
+    color: aliceblue;
+    }
+    
+
