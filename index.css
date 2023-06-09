@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    height: 12vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #2E2D6A;
+    color: white;
+}
+
+aside {
+    background-color: #F5F5F5;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+#logo_uvv {
+    width: 80%;
+}
+
+main {
+    
+}
