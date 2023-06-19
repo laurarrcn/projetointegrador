@@ -249,3 +249,12 @@ h6#email {
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
 }
+
+
+.botoes{
+    text-decoration: none;
+    color: #F5F5F5;
+    font-weight: bold;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
