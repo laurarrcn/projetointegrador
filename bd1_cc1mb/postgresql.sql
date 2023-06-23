@@ -1,33 +1,3 @@
---Apaga o banco de dados, caso exista
-DROP DATABASE IF EXISTS instituicao
-
---Apagando o schema, caso exista
-DROP SCHEMA IF EXISTS atvcomplementares
-
---Apagando o usuário, caso exista
-DROP USER IF EXISTS daniele
-
---Criar usuario e senha
-CREATE USER daniele WITH 
-CREATEDB
-LOGIN PASSWORD 'computacao@raiz';
-
--- Criar banco de dados
-CREATE DATABASE instituicao
-OWNER daniele
-TEMPLATE template0
-ENCODING 'UTF8'
-LC_COLLATE 'pt_BR.UTF-8'
-LC_CTYPE 'pt_BR.UTF-8'
-ALLOW_CONNECTIONS true;
-
--- Trocar conexao e inser senha;
-\c 'dbname=instituicao user=daniele password=computacao@raiz';
-
--- Criar SCHEMA
-CREATE SCHEMA atvcomplementares AUTHORIZATION daniele;
-
-
 --Criar tabelas
 CREATE TABLE coordenador (
                 coordenador_id NUMERIC(20)  NOT NULL,
@@ -85,7 +55,7 @@ COMMENT ON COLUMN certificado.data_emissao    IS 'Data que o certificado foi emi
 COMMENT ON COLUMN certificado.PDF             IS 'PDF do certificado';
 
 
---Adicionar constraints
+--Adicionar FK
 ALTER TABLE certificado ADD CONSTRAINT coordenador_certificado_fk
 FOREIGN KEY (coordenador_id)
 REFERENCES coordenador (coordenador_id)
